@@ -1,0 +1,23 @@
+<div class = "jumbotron bg-secondary" style="margin-left: 100px">
+<%- if 	@pedido.errors.any? %>
+<div class="alert alert-danger">
+	<h4 class="alert-heading">Oh Noooooooo! </h4>
+	<p>Recuerda ingresar todos los datos </p>
+</div>
+<%end%>
+
+<h1><strong>Ingresa los datos del pedido</strong></h1>
+
+<%= form_for :pedido, url: {action: "create"} do |f| %>
+
+<h3><%= f.label :material %><br></h3>
+<%= f.text_field :material, class: 'form-control' %>
+<h3><%= f.label :cantidad %><br></h3>
+<%= f.text_field :cantidad, class: 'form-control' %>
+<h3><%= f.label :detalles %><br></h3>
+<%= f.text_field :detalles, class: 'form-control' %>
+<br>
+<%= f.submit 'Solicitar', :class => 'btn btn-primary'%>	
+<% end %>
+
+</div>

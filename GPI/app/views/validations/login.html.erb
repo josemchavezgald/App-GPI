@@ -1,0 +1,14 @@
+<div class = "container">
+<p>LOGIN</p>
+<%= form_for :validation, url: { action: "validation"} do |f| %>
+
+<%= f.label :nombre %><br>
+<%= f.text_field :nombre, class: 'form-control' %>
+<br>
+<%= f.label :contrasena %><br>
+<%= f.text_field :contrasena, class: 'form-control' %>
+<br><br><br>
+<%= f.submit 'ingresar', :class => 'btn btn-primary'%>	
+<% end %>
+
+</div>

@@ -1,0 +1,15 @@
+<div class = 'container'style = 'margin-top: 150px'>
+<div class= "row">
+<%= @gg.each do |cuenta|%>
+
+<figure class="figure">
+  <img src="desktop/GPI/public/descarga.jpg class="figure-img img-fluid rounded">
+  <figcaption class="figure-caption"><%= cuenta.nombre %>
+<%= link_to 'editar', action: "edit", :id => cuenta.id %>
+<%= link_to 'eliminar', data: {confirm: 'desea borrar esta cuenta?'}, action: "destroy", :id => cuenta.id %>
+</figcaption>
+</figure> 
+<br>
+<%end%>
+</div>
+</div>

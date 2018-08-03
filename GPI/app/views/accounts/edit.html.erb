@@ -1,0 +1,13 @@
+
+
+<div class = "container">
+<div class = "form-group">
+<p>Escriba el nuevo nombre de usuario</p>
+<%= form_for :account, url: {controller:"accounts", action: "update", :id => @account  } do |f| %>
+<%= f.label :nombre %><br>
+<%= f.text_field :nombre, class: 'form-control' %>
+<br><br><br>
+<%= f.submit 'cambiar', :class => 'btn btn-primary'%>
+<% end %>
+</div>
+</div>

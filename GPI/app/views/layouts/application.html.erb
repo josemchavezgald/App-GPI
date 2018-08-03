@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style type="text/css">
+<!--ul {list-style:none;
+}-->
+  
+</style>
+
+    <title>GPI</title>
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body class="main bg-secondary">
+  <div class="main ">
+    
+  	<ul class="navbar bg-primary justify-content-between fixed-top">
+      <a href= "home/index" class="navar-brand"><img src="../descarga.jpg" class="w-50 rounded img-thumbnail float-left" ></a>
+  		<%- if user_signed_in? %>
+    		<li class="nav-item justify-content-end">
+          <h1>Navegando como <%= current_user.nombre%> </h1>
+    			<%=link_to 'Salir', destroy_user_session_path, method: :delete,:class => 'btn btn-danger btn-lg' %>
+    		</li>
+  		<%- else %>
+        <div class="btn-group-end justify-content-end">
+      		<li class="nav-item">
+      			<%=link_to 'Iniciar', new_user_session_path, :class => 'btn btn-light btn-lg' %>
+      		</li>
+          <li class="nav-item">
+      			<%=link_to 'Registrarme', new_user_registration_path,:class => 'btn btn-secondary btn-lg' %>
+      		</li>
+      		<% end %>
+        </div>
+  	</ul>
+
+    <%- if user_signed_in? %>
+
+      <%- if (current_user.email == "admin@gpi.com") %> 
+
+         <ul class="nav nav-pills nav-stacked "style ="margin-top: 90px" >
+            <div class="navbar navbar-inverse navbar-fixed-left bg-success " style="width: 220px; height: 600px">
+              <ul class="nav navbar-nav ">
+                 <button type="button" class="btn btn-dark btn-lg border" style="width: 170px ; height: 80px"> <%=link_to 'Admin1',  controller: "pedidos", action: "new" , :style=>'color:#FFFFFF;', :class => 'btn btn-secondary btn-lg'%>
+                  </button><br>
+
+                 <button type = "button" class="btn btn-dark btn-lg border" style="width: 170px ; height: 80px">                 
+                   <%=link_to 'Estados', controller: "pedidos", action: "indexAdmin", :style=>'color:#FFFFFF;', :class => "css_class" %></button>
+              </ul>
+            </div>
+
+
+      <%- else %>
+            <ul class="nav nav-pills nav-stacked "style ="margin-top: 90px" >
+            <div class="navbar navbar-inverse navbar-fixed-left bg-primary " style="width: 220px; height: 600px">
+              <ul class="nav navbar-nav ">
+                 <button type="button" class="btn btn-dark btn-lg border" style="width: 170px ; height: 80px"> <%=link_to 'Solicitar',  controller: "pedidos", action: "new" , :class => 'btn btn-secondary btn-lg'%>
+                  </button><br>
+
+                 <button type = "button" class="btn btn-dark btn-lg border" style="width: 170px ; height: 80px">                 
+                   <%=link_to 'Pedidos', controller: "pedidos", action: "index", :style=>'color:#FFFFFF;', :class => "css_class" %></button>
+              </ul>
+            </div>
+      <% end %>
+
+    <% end %> 
+
+    <%= yield %>
+  </div>
+    </div>
+  </body>
+
+
+</html>
