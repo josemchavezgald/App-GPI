@@ -5,3 +5,7 @@ Ejecutar en consola "bundle install" para instalaciones de gemas asociadas, lueg
 Desde navegador, ir al link localhost:3000 para visualizar
 
 Para cuenta de administrador ingresar utilizando correo admin@gpi.com y contraseña: "secreto"
+
+Para cuenta administrador de compras, se debe ingresar utilizando correo compra@gpi.com y contraseña: "secreto2"
+
+IMPORTANTE: Debe existir una carpeta vacia llamada "channels" en GPI/app/assets/javascripts  .Github no me permite subir carpetas vacias lamentablemente.
