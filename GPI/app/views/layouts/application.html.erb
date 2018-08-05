@@ -41,33 +41,42 @@
       <%- if (current_user.email == "admin@gpi.com") %> 
 
          <ul class="nav nav-pills nav-stacked "style ="margin-top: 90px" >
-            <div class="navbar navbar-inverse navbar-fixed-left bg-success " style="width: 220px; height: 600px">
+            <div class="navbar navbar-inverse navbar-fixed-left bg-success " style="width: 160px; height: 600px">
               <ul class="nav navbar-nav ">
-                 <button type="button" class="btn btn-dark btn-lg border" style="width: 170px ; height: 80px"> <%=link_to 'Admin1',  controller: "pedidos", action: "new" , :style=>'color:#FFFFFF;', :class => 'btn btn-secondary btn-lg'%>
-                  </button><br>
 
-                 <button type = "button" class="btn btn-dark btn-lg border" style="width: 170px ; height: 80px">                 
-                   <%=link_to 'Estados', controller: "pedidos", action: "indexAdmin", :style=>'color:#FFFFFF;', :class => "css_class" %></button>
+                <a class="btn bg-dark btn-outline-light btn-lg" style="width: 140px; height: 60px"  href="#" role="button">Bodega</a> <br>
+                <a class="btn bg-dark btn-outline-light btn-lg" style="width: 140px; height: 60px"  href="../pedidos/indexAdmin" role="button">Estados</a>
+                
               </ul>
             </div>
 
+      <%-elsif (current_user.email == "compra@gpi.com")%>
+
+      <ul class="nav nav-pills nav-stacked "style ="margin-top: 90px" >
+            <div class="navbar navbar-inverse navbar-fixed-left bg-warning " style="width: 210px; height: 600px">
+              <ul class="nav navbar-nav ">
+                <a class="btn bg-dark btn-outline-light btn-lg" style="width: 180px; height: 60px"  href="../compras/new" role="button">Agregar producto</a><br>
+                <a class="btn bg-dark btn-outline-light btn-lg" style="width: 180px; height: 60px"  href="../compras/index" role="button">Realizar compra</a>
+                
+              </ul>
+            </div>
 
       <%- else %>
             <ul class="nav nav-pills nav-stacked "style ="margin-top: 90px" >
-            <div class="navbar navbar-inverse navbar-fixed-left bg-primary " style="width: 220px; height: 600px">
+            <div class="navbar navbar-inverse navbar-fixed-left bg-primary " style="width: 160px; height: 600px">
               <ul class="nav navbar-nav ">
-                 <button type="button" class="btn btn-dark btn-lg border" style="width: 170px ; height: 80px"> <%=link_to 'Solicitar',  controller: "pedidos", action: "new" , :class => 'btn btn-secondary btn-lg'%>
-                  </button><br>
 
-                 <button type = "button" class="btn btn-dark btn-lg border" style="width: 170px ; height: 80px">                 
-                   <%=link_to 'Pedidos', controller: "pedidos", action: "index", :style=>'color:#FFFFFF;', :class => "css_class" %></button>
+                <a class="btn bg-dark btn-outline-light btn-lg" style="width: 140px; height: 60px" href="../pedidos/new" role="button">Solicitar</a> <br>
+                <a class="btn bg-dark btn-outline-light btn-lg" style="width: 140px; height: 60px" href="../pedidos/index" role="button">pedidos</a>
+                
+
               </ul>
             </div>
       <% end %>
 
     <% end %> 
 
-    <%= yield %>
+    <%= yield %>  
   </div>
     </div>
   </body>

@@ -1,15 +1,19 @@
 <div class="container" style="margin-top: 100px">
 	<%= @gg.each do |pedido|%>
 
-	<ul class="list-group">
-		<li class="list-group-item list-group-item-primary bg-success"> <%=pedido.codigo%> </li>
-		<li class="list-group-item list-group-item-primary"> <%=pedido.material%></li>
-		<li class="list-group-item list-group-item-primary"> <%=pedido.cantidad%></li>
-		<li class="list-group-item list-group-item-primary"> <%=pedido.estado%></li>
-		<li class="list-group-item list-group-item-primary"> <%=pedido.solicitante%></li>
-		<li class="list-group-item list-group-item-primary"> <%=pedido.detalles%></li>
-		<li class="list-group-item list-group-item-primary">
-			<%= link_to 'eliminar', data: {confirm: 'desea borrar esta cuenta?'}, action: "destroy", :id => pedido.id %></li><br>
+
+	<ul class="shadow border border-dark list-inline bg-light">
+		<li class=" border-list-inline-item bg-primary"> Codigo: <%=pedido.codigo%> </li>
+		<li class=" shadow p-1  mb-1 list-inline-item bg-success"> Material: <%=pedido.material%></li>
+		<li class=" shadow p-1  mb-1 list-inline-item bg-light"> Trabajo: <%=pedido.trabajo%></li>
+		<li class=" shadow p-1  mb-1 list-inline-item bg-light"> Cantidad: <%=pedido.cantidad%></li>
+		<li class=" shadow p-1  mb-1 list-inline-item bg-light"> Unidad: <%=pedido.unidad%></li>
+		<li class=" shadow p-1  mb-1 list-inline-item bg-light"> Solicitante: <%=pedido.solicitante%></li>
+		<li class=" shadow p-1  mb-1 list-inline-item bg-light"> Detalles: <%=pedido.detalles%></li>
+		<li class=" shadow p-1  mb-1 list-inline-item bg-warning"> Estado: <%=pedido.estado%></li>
+
+		
+		<li class=" shadow p-1  mb-1 list-inline-item bg-light"><%= link_to 'eliminar', data: {confirm: 'desea borrar esta cuenta?'}, action: "destroy", :id => pedido.id %></li><br>
 
 	</ul>
 

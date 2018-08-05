@@ -15,7 +15,6 @@ class PedidosController < ApplicationController
 
 	def create		 
 		@pedido = Pedido.create(pedido_params)
-		@pedido.codigo = "hola"
 		@pedido.solicitante = current_user.email
 		@pedido.estado = "solicitado"
 		
@@ -47,6 +46,6 @@ class PedidosController < ApplicationController
 	end
 
 	def pedido_params	
-		params.require(:pedido).permit(:material,:cantidad,:detalles,:estado)
+		params.require(:pedido).permit(:material,:cantidad,:detalles,:estado,:trabajo,:codigo,:unidad)
 	end
 end
