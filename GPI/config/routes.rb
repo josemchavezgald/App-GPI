@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
+  get 'ofertas/index'
+
   get 'compras/index'
 
   get 'provedores/index'
