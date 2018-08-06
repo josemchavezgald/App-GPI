@@ -52997,3 +52997,390 @@ Processing by HomeController#index as HTML
 Completed 200 OK in 265ms (Views: 230.4ms | ActiveRecord: 0.0ms)
 
 
+DEPRECATION WARNING: Using a dynamic :controller segment in a route is deprecated and will be removed in Rails 5.2. (called from block in <top (required)> at C:/Users/pato/Desktop/Proyecto_Talaveras/GPI/config/routes.rb:23)
+DEPRECATION WARNING: Using a dynamic :action segment in a route is deprecated and will be removed in Rails 5.2. (called from block in <top (required)> at C:/Users/pato/Desktop/Proyecto_Talaveras/GPI/config/routes.rb:23)
+DEPRECATION WARNING: Using a dynamic :controller segment in a route is deprecated and will be removed in Rails 5.2. (called from block in <top (required)> at C:/Users/pato/Desktop/Proyecto_Talaveras/GPI/config/routes.rb:24)
+DEPRECATION WARNING: Using a dynamic :action segment in a route is deprecated and will be removed in Rails 5.2. (called from block in <top (required)> at C:/Users/pato/Desktop/Proyecto_Talaveras/GPI/config/routes.rb:24)
+Started GET "/" for 127.0.0.1 at 2018-08-05 19:56:07 -0400
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (3.0ms)
+Completed 500 Internal Server Error in 31238ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error ():
+    10:     <title>GPI</title>
+    11:     <%= csrf_meta_tags %>
+    12: 
+    13:     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    14:     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    15:   </head>
+    16: 
+  
+(execjs):1
+app/views/layouts/application.html.erb:13:in `_app_views_layouts_application_html_erb__282197972_86913120'
+DEPRECATION WARNING: Using a dynamic :controller segment in a route is deprecated and will be removed in Rails 5.2. (called from block in <top (required)> at C:/Users/pato/Desktop/Proyecto_Talaveras/GPI/config/routes.rb:23)
+DEPRECATION WARNING: Using a dynamic :action segment in a route is deprecated and will be removed in Rails 5.2. (called from block in <top (required)> at C:/Users/pato/Desktop/Proyecto_Talaveras/GPI/config/routes.rb:23)
+DEPRECATION WARNING: Using a dynamic :controller segment in a route is deprecated and will be removed in Rails 5.2. (called from block in <top (required)> at C:/Users/pato/Desktop/Proyecto_Talaveras/GPI/config/routes.rb:24)
+DEPRECATION WARNING: Using a dynamic :action segment in a route is deprecated and will be removed in Rails 5.2. (called from block in <top (required)> at C:/Users/pato/Desktop/Proyecto_Talaveras/GPI/config/routes.rb:24)
+Started GET "/" for 127.0.0.1 at 2018-08-05 19:57:48 -0400
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (3.0ms)
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+Completed 200 OK in 49392ms (Views: 49256.8ms | ActiveRecord: 4.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2018-08-05 19:58:42 -0400
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (3.0ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (184.9ms)
+Completed 200 OK in 961ms (Views: 955.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2018-08-05 19:58:52 -0400
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"AJfeznao7XKjLzWmPVrwly3ItSj6xe64LkQPvT99q1lTs+R1b0io43sbGDpO5jVCusqSmz/aKittVr2gi+s5XQ==", "user"=>{"email"=>"pato@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Ingresar"}
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "pato@gmail.com"], ["LIMIT", 1]]
+Completed 401 Unauthorized in 10ms (ActiveRecord: 0.0ms)
+
+
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"AJfeznao7XKjLzWmPVrwly3ItSj6xe64LkQPvT99q1lTs+R1b0io43sbGDpO5jVCusqSmz/aKittVr2gi+s5XQ==", "user"=>{"email"=>"pato@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Ingresar"}
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.0ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (46.0ms)
+Completed 200 OK in 965ms (Views: 720.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2018-08-05 19:58:59 -0400
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (3.0ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (66.0ms)
+Completed 200 OK in 703ms (Views: 701.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2018-08-05 19:59:18 -0400
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"xkXJoDLIfstDJHzb/PwteO2fryous7+BYgwiN+2sZamXoI/ZWniO9G8zx9UvhfHmatARt10pv1UJc9Swpcw2qg==", "user"=>{"nombre"=>"Patricio Aguirre", "email"=>"pato@gmail.com", "password"=>"[FILTERED]", "confirme_password"=>"[FILTERED]"}, "commit"=>"Registrarme"}
+Unpermitted parameter: :confirme_password
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (1.0ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "pato@gmail.com"], ["LIMIT", 1]]
+  [1m[35mSQL (18.0ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "nombre", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["email", "pato@gmail.com"], ["encrypted_password", "$2a$11$MKsuiaiWhtH2bA/geE5Z1OUhMtI9.qDiYiD5tPNl21Ge26Q70gOxC"], ["nombre", "Patricio Aguirre"], ["created_at", "2018-08-05 23:59:18.845180"], ["updated_at", "2018-08-05 23:59:18.845180"]]
+  [1m[35m (147.9ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 773ms (ActiveRecord: 166.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-08-05 19:59:19 -0400
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (1.0ms)
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+Completed 200 OK in 713ms (Views: 675.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/pedidos/new" for 127.0.0.1 at 2018-08-05 19:59:22 -0400
+Processing by PedidosController#new as HTML
+  Rendering pedidos/new.html.erb within layouts/application
+  Rendered pedidos/new.html.erb within layouts/application (7.0ms)
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+Completed 200 OK in 444ms (Views: 326.4ms | ActiveRecord: 2.0ms)
+
+
+Started POST "/pedidos/create" for 127.0.0.1 at 2018-08-05 20:00:26 -0400
+Processing by PedidosController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"z2i6Iv1QqzzZyiXlfbtnwpBHd8HF++Zpx+eJYEFXdBeJVtVGglAO7JvO0AmQqdgIxftZKWmD0F3t+57s+gERhA==", "pedido"=>{"codigo"=>"xnatys1327qwms", "material"=>"clavos", "cantidad"=>"50", "unidad"=>"3 mm", "trabajo"=>"Represa puente alto", "detalles"=>"sin urgencia"}, "commit"=>"Solicitar"}
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (25.0ms)[0m  [1m[32mINSERT INTO "pedidos" ("codigo", "material", "cantidad", "detalles", "created_at", "updated_at", "trabajo", "unidad") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["codigo", "xnatys1327qwms"], ["material", "clavos"], ["cantidad", 50.0], ["detalles", "sin urgencia"], ["created_at", "2018-08-06 00:00:27.021993"], ["updated_at", "2018-08-06 00:00:27.021993"], ["trabajo", "Represa puente alto"], ["unidad", "3 mm"]]
+  [1m[35m (116.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (27.0ms)[0m  [1m[33mUPDATE "pedidos" SET "solicitante" = ?, "estado" = ?, "updated_at" = ? WHERE "pedidos"."id" = ?[0m  [["solicitante", "pato@gmail.com"], ["estado", "solicitado"], ["updated_at", "2018-08-06 00:00:27.180433"], ["id", 36]]
+  [1m[35m (142.9ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/pedidos
+Completed 302 Found in 408ms (ActiveRecord: 311.8ms)
+
+
+Started GET "/pedidos" for 127.0.0.1 at 2018-08-05 20:00:27 -0400
+Processing by PedidosController#index as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  Rendering pedidos/index.html.erb within layouts/application
+  [1m[36mPedido Load (0.0ms)[0m  [1m[34mSELECT "pedidos".* FROM "pedidos" WHERE (solicitante = 'pato@gmail.com')[0m
+  Rendered pedidos/index.html.erb within layouts/application (6.0ms)
+Completed 200 OK in 378ms (Views: 325.5ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/pedidos/index" for 127.0.0.1 at 2018-08-05 20:00:35 -0400
+Processing by PedidosController#index as HTML
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  Rendering pedidos/index.html.erb within layouts/application
+  [1m[36mPedido Load (1.0ms)[0m  [1m[34mSELECT "pedidos".* FROM "pedidos" WHERE (solicitante = 'pato@gmail.com')[0m
+  Rendered pedidos/index.html.erb within layouts/application (5.0ms)
+Completed 200 OK in 339ms (Views: 297.4ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/pedidos/index" for 127.0.0.1 at 2018-08-05 20:00:37 -0400
+Processing by PedidosController#index as HTML
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  Rendering pedidos/index.html.erb within layouts/application
+  [1m[36mPedido Load (1.0ms)[0m  [1m[34mSELECT "pedidos".* FROM "pedidos" WHERE (solicitante = 'pato@gmail.com')[0m
+  Rendered pedidos/index.html.erb within layouts/application (13.0ms)
+Completed 200 OK in 456ms (Views: 379.1ms | ActiveRecord: 1.0ms)
+
+
+Started DELETE "/users/sign_out" for 127.0.0.1 at 2018-08-05 20:00:45 -0400
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"wgK63b1Ltl/BPLTWV1u6UwUNhePCfDSrS1CxHiKdRaAPsaO5hhKNktStF+S1kMv9geJkCwcnOGv+ypsKvSecLA=="}
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 23ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-08-05 20:00:45 -0400
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 405ms (Views: 365.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2018-08-05 20:00:48 -0400
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (2.0ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (74.0ms)
+Completed 200 OK in 918ms (Views: 910.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2018-08-05 20:00:57 -0400
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"1pMZbVJltt+UhqurTdfY5NScWu3qUh5qjEtiDEZilIQ+QQnsPkp/NX6NK4HLFh4NBBEhVcwmaDrh61BCRRFhjg==", "user"=>{"email"=>"admin@gpi.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Ingresar"}
+  [1m[36mUser Load (2.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "admin@gpi.com"], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Completed 302 Found in 574ms (ActiveRecord: 2.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-08-05 20:00:57 -0400
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (1.0ms)
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+Completed 200 OK in 384ms (Views: 340.7ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-08-05 20:01:09 -0400
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (2.0ms)
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+Completed 200 OK in 619ms (Views: 559.1ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-08-05 20:01:12 -0400
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (1.0ms)
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+Completed 200 OK in 339ms (Views: 304.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/pedidos/indexAdmin" for 127.0.0.1 at 2018-08-05 20:01:17 -0400
+Processing by PedidosController#indexAdmin as HTML
+  Rendering pedidos/indexAdmin.html.erb within layouts/application
+  [1m[36mPedido Load (1.0ms)[0m  [1m[34mSELECT "pedidos".* FROM "pedidos"[0m
+  Rendered pedidos/indexAdmin.html.erb within layouts/application (17.0ms)
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+Completed 200 OK in 356ms (Views: 302.3ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/pedidos/edit/36" for 127.0.0.1 at 2018-08-05 20:01:34 -0400
+Processing by PedidosController#edit as HTML
+  Parameters: {"id"=>"36"}
+  [1m[36mPedido Load (0.0ms)[0m  [1m[34mSELECT  "pedidos".* FROM "pedidos" WHERE "pedidos"."id" = ? LIMIT ?[0m  [["id", 36], ["LIMIT", 1]]
+  Rendering pedidos/edit.html.erb within layouts/application
+  Rendered pedidos/edit.html.erb within layouts/application (7.0ms)
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+Completed 200 OK in 637ms (Views: 560.1ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/pedidos/logo.png" for 127.0.0.1 at 2018-08-05 20:01:35 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/pedidos/logo.png"):
+  
+actionpack (5.1.6) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.6.2) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.6.2) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.6) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.6) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.6) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.5) lib/rack/method_override.rb:22:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.6) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.6) lib/rails/engine.rb:522:in `call'
+puma (3.11.4) lib/puma/configuration.rb:225:in `call'
+puma (3.11.4) lib/puma/server.rb:632:in `handle_request'
+puma (3.11.4) lib/puma/server.rb:446:in `process_client'
+puma (3.11.4) lib/puma/server.rb:306:in `block in run'
+puma (3.11.4) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started POST "/pedidos/update/36" for 127.0.0.1 at 2018-08-05 20:01:46 -0400
+Processing by PedidosController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"/8xdl/5iwC4TJVk1VSctfoMONtmQa64Zmpw0bd4rsjQSwy6BnKEkTqJQwdrvasgMUCRV7e/i1GN8zABGSrC//Q==", "pedido"=>{"estado"=>"En caminon a bodega"}, "commit"=>"Modificar", "id"=>"36"}
+  [1m[36mPedido Load (0.0ms)[0m  [1m[34mSELECT  "pedidos".* FROM "pedidos" WHERE "pedidos"."id" = ? LIMIT ?[0m  [["id", 36], ["LIMIT", 1]]
+  [1m[35m (2.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (13.0ms)[0m  [1m[33mUPDATE "pedidos" SET "estado" = ?, "updated_at" = ? WHERE "pedidos"."id" = ?[0m  [["estado", "En caminon a bodega"], ["updated_at", "2018-08-06 00:01:46.798814"], ["id", 36]]
+  [1m[35m (124.4ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/pedidos/indexAdmin
+Completed 302 Found in 178ms (ActiveRecord: 139.4ms)
+
+
+Started GET "/pedidos/indexAdmin" for 127.0.0.1 at 2018-08-05 20:01:47 -0400
+Processing by PedidosController#indexAdmin as HTML
+  Rendering pedidos/indexAdmin.html.erb within layouts/application
+  [1m[36mPedido Load (1.0ms)[0m  [1m[34mSELECT "pedidos".* FROM "pedidos"[0m
+  Rendered pedidos/indexAdmin.html.erb within layouts/application (18.0ms)
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+Completed 200 OK in 378ms (Views: 340.2ms | ActiveRecord: 1.0ms)
+
+
+Started DELETE "/users/sign_out" for 127.0.0.1 at 2018-08-05 20:01:53 -0400
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"AZD1e//6f72eBPmtnaJ6ejWYzfRLkj2njDKlybAnNsRT2Vd2o7x/zQHWRnglsDJOy6PofXG1uwL0HDKW3ORRqA=="}
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 14ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-08-05 20:01:53 -0400
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 325ms (Views: 283.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2018-08-05 20:01:57 -0400
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (7.0ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (150.4ms)
+Completed 200 OK in 841ms (Views: 838.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2018-08-05 20:02:06 -0400
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"SIqP/OXagO539muVj4kUc5+8M3ER9nZk9cDYjHOzTy4MhuSjpicwZw6pr6pz7gk3eGvCA2pj4tBZUrjcwELrdQ==", "user"=>{"email"=>"compra@gpi.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Ingresar"}
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "compra@gpi.com"], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Completed 302 Found in 575ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-08-05 20:02:06 -0400
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (1.0ms)
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+Completed 200 OK in 450ms (Views: 411.2ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/compras/new" for 127.0.0.1 at 2018-08-05 20:02:09 -0400
+Processing by ComprasController#new as HTML
+  Rendering compras/new.html.erb within layouts/application
+  Rendered compras/new.html.erb within layouts/application (3.0ms)
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+Completed 200 OK in 430ms (Views: 323.2ms | ActiveRecord: 2.0ms)
+
+
+Started POST "/compras/create" for 127.0.0.1 at 2018-08-05 20:02:26 -0400
+Processing by ComprasController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"s2HqE6gh3Terw2tBoFkwfyCq8IuQFJEIaVjbTi55DEgGQ4RMwLyjc4yJTKo9wmStIaKdQqapuBSU04rN/mHzwg==", "compra"=>{"producto"=>"clavos", "provedor"=>"Sodimac", "precio"=>"200"}, "commit"=>"Agregar"}
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (34.0ms)[0m  [1m[32mINSERT INTO "compras" ("producto", "provedor", "precio", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["producto", "clavos"], ["provedor", "Sodimac"], ["precio", 200.0], ["created_at", "2018-08-06 00:02:26.589602"], ["updated_at", "2018-08-06 00:02:26.589602"]]
+  [1m[35m (119.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/compras/index
+Completed 302 Found in 187ms (ActiveRecord: 153.9ms)
+
+
+Started GET "/compras/index" for 127.0.0.1 at 2018-08-05 20:02:26 -0400
+Processing by ComprasController#index as HTML
+  Rendering compras/index.html.erb within layouts/application
+  [1m[36mCompra Load (5.0ms)[0m  [1m[34mSELECT "compras".* FROM "compras"[0m
+  Rendered compras/index.html.erb within layouts/application (14.0ms)
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+Completed 200 OK in 422ms (Views: 345.4ms | ActiveRecord: 5.0ms)
+
+
+Started GET "/compras/index" for 127.0.0.1 at 2018-08-05 20:02:38 -0400
+Processing by ComprasController#index as HTML
+  Rendering compras/index.html.erb within layouts/application
+  [1m[36mCompra Load (0.0ms)[0m  [1m[34mSELECT "compras".* FROM "compras"[0m
+  Rendered compras/index.html.erb within layouts/application (6.0ms)
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+Completed 200 OK in 322ms (Views: 285.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/compras/index" for 127.0.0.1 at 2018-08-05 20:02:40 -0400
+Processing by ComprasController#index as HTML
+  Rendering compras/index.html.erb within layouts/application
+  [1m[36mCompra Load (1.0ms)[0m  [1m[34mSELECT "compras".* FROM "compras"[0m
+  Rendered compras/index.html.erb within layouts/application (6.0ms)
+Started GET "/compras/index" for 127.0.0.1 at 2018-08-05 20:02:41 -0400
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+Processing by ComprasController#index as HTML
+Started GET "/compras/index" for 127.0.0.1 at 2018-08-05 20:02:41 -0400
+Completed 200 OK in 549ms (Views: 497.0ms | ActiveRecord: 1.0ms)
+
+
+Processing by ComprasController#index as HTML
+  Rendering compras/index.html.erb within layouts/application
+  [1m[36mCompra Load (1.0ms)[0m  [1m[34mSELECT "compras".* FROM "compras"[0m
+  Rendered compras/index.html.erb within layouts/application (49.0ms)
+  Rendering compras/index.html.erb within layouts/application
+  [1m[36mCompra Load (1.0ms)[0m  [1m[34mSELECT "compras".* FROM "compras"[0m
+  Rendered compras/index.html.erb within layouts/application (128.9ms)
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+Completed 200 OK in 854ms (Views: 742.2ms | ActiveRecord: 2.0ms)
+
+
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+Completed 200 OK in 741ms (Views: 690.3ms | ActiveRecord: 3.0ms)
+
+
+Started DELETE "/users/sign_out" for 127.0.0.1 at 2018-08-05 20:02:43 -0400
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"njaHBNGrqCZzLkgvru5w9WeCjCX5U72cSQexszv95d4U9m0SlocKCs0CBpWZd+o3OSpj5cDSZRW8Ay8eZKX5AA=="}
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 11ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-08-05 20:02:43 -0400
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (6.0ms)
+Completed 200 OK in 474ms (Views: 424.4ms | ActiveRecord: 0.0ms)
+
+
