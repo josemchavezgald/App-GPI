@@ -1,0 +1,11 @@
+{
+    "materiales": [
+    { "id": 1, "producto": "martillo", "precio": 1000, "provedor": "homecenter" },
+    { "id": 2, "producto": "guantes", "precio": 2000, "provedor": "easy" },
+    { "id": 3, "producto": "clavos", "precio": 5000, "provedor": "lider" },
+    { "id": 4, "producto": "madera", "precio": 300, "provedor": "homecenter" },
+    { "id": 5, "producto": "tornillos", "precio": 15, "provedor": "easy" },
+    { "id": 6, "producto": "pernos", "precio": 10, "provedor": "easy" }
+
+  ]
+}

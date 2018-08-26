@@ -1,5 +1,8 @@
 {
   "name": "GPI",
   "private": true,
-  "dependencies": {}
+  "dependencies": {
+    "json-server": "^0.14.0",
+    "npm": "^6.4.0"
+  }
 }
