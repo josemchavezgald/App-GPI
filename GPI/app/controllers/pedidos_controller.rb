@@ -8,6 +8,10 @@ class PedidosController < ApplicationController
 	def indexAdmin
 		@gg = Pedido.all
 	end
+	def indexCompra
+		@gg = Pedido.where(['estado = "compra"'])
+	end
+
 
 	def new
 		@pedido= Pedido.new 
@@ -39,7 +43,7 @@ class PedidosController < ApplicationController
 	end
 
 	def destroy
-		redirect_to action: "index"
+		redirect_to action: "indexAdmin"
 		@pedido = Pedido.find(params[:id])
 		@pedido.destroy
 		 

@@ -7,6 +7,10 @@ layout 'application'
 	def new
 		@pedido= Compra.new 
 	end
+	def compras2
+		file = File.read('laudus/db.json')
+		@test = JSON.parse(file)
+	end
 
 	def create		 
 		@pedido = Compra.create(compra_params)

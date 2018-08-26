@@ -1,0 +1,2 @@
+class Guardado < ApplicationRecord
+end

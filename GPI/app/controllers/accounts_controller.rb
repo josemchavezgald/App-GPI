@@ -1,5 +1,6 @@
 class AccountsController < ApplicationController
 	layout 'application'
+
 	def index
 		@gg = Account.all
 

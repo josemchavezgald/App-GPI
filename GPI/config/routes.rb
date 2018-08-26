@@ -1,5 +1,9 @@
 Rails.application.routes.draw do
 
+  get 'guardados/new'
+
+  get 'guardados/indexBodega'
+
   get 'ofertas/index'
 
   get 'compras/index'
@@ -16,6 +20,8 @@ Rails.application.routes.draw do
   get 'ingresos/login'
 
   get 'login/login'
+
+  get 'compras/compras2'
 
   resources :account
 
