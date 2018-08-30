@@ -9,6 +9,7 @@ Desde navegador, ir al link localhost:3000 para visualizar
 °Para cuenta administrador de compras, se debe ingresar utilizando correo compra@gpi.com y contraseña: "secreto2"
 
 °Para colaborador de la empresa, debe crearse una cuenta en la opcion registrarme
+
 -Colaborador puede hacer una solicitud de material y ver todas las solicitudes que el ha hecho 
 
 -Bodeguero debe actualizar estado a "compra" para que administrador de compra pueda visualizar el pedido. Para esto debe apretar la opción editar en la orden de compra que desee actualizar.
